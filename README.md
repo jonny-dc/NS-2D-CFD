@@ -1,2 +1,6 @@
 # NS-2D-CFD
-CFD solution of the 2D incompressible Navier-Stokes equations for flow in a square box
+CFD solution of the 2D incompressible Navier-Stokes equations for lid-driven cavity flow
+
+This program solves the 2D incompressible Navier-Stokes equations for a lid-driven cavity flow, using a finite-volume method in a square domain. This program was developed for a project as part of the module SG2122 Computational Fluid Dynamics at KTH Royal Institute of Technology, in March 2024. The problem consists of an incompressible fluid filling a square box, with three walls stationary and the third moving at a constant velocity tangential to itself. This creates an unsteady flow field which is solved for at each time step using a projection-correction method. The accuracy of the simulation depends largely on the spatial discretisation size and the time step (which is related to the grid size by the CFL condition). 
+
+To use the program, open _project\_main.m_, and set the flow parameters such as Prandtl & Richardson numbers, and time step & grid spacing. Running the program will then solve the Navier-Stokes equations at each time step, outputting the flow field at a set frequency. Note that the calculation time increases very significantly with the grid density. As an addition to the basic program, the temperature field at each time step is also calculated and plotted, assuming an initially linear temperature distribution across the vertical sides of the box. 
